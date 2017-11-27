@@ -6,6 +6,57 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <h1>GIT GÜD</h1>
+    <h1>Git and Github</h1>
+    <blockquote>Ready to talk Version Control?</blockquote>
+    <h2>What is Git?</h2>
+    <p>Before we start slinging around BASH commands lets talk what Git is. Git is a version control system that not only allows local versioning but with the addition of Github allows remote versioning as well.</p>
+    <span>There a couple major perks to this:</span>
+    <ul>
+      <li>Local commits allow a safe space to build and expirement.</li>
+      <li>resetting the repo to a previous commit is VERY usefull when the project breaks.</li>
+      <li>Remote Repos allow for colabriration with peers and the open source community.</li>
+      <li>The different github workflows allow for various types of teams (startup to enterprise) to develop.</li>
+    </ul>
+    <H2>Command Line Interface</H2>
+    <div class="commands">
+      <h3>Lets cover the basic CLI for git.</h3>
+      <span>To initalize your Git Repo use:</span><br />
+      <code>git init</code><br /><br />
+      <span>To create a remote repo on github from the CLI use:</span><br />
+      <code>hub create</code><br /><br />
+      <span>To stage your modified files use:</span><br />
+      <code>git add .</code><br /><br />
+      <span>To commit your staged files (with a message) use:</span><br />
+      <code>git commit -m "commit message goes here"</code><br /><br />
+      <span>To push your code to github (for the first time, with a Remote Upstream) use:</span><br />
+      <code>git push -u origin master</code><br />
+    </div>
+    <h2>Feature Branch Workflow</h2>
+    <p>Branching might be the single most powerful feature of Git and Github. Branching, when used correctlly, allows for collaboration while avoiding the common pitfalls of merge conflicts.</p>
+    <div class="commands">
+      <span>Lets start with cloneing down a remote repo:</span><br />
+      <code>git clone https://github.com/Veloxious/gitGud.git</code><br /><br />
+      <span>CD into the new directory:</span><br />
+      <code>cd gitGud</code><br /><br />
+      <span>Branch out from the master branch, for this we have two options:</span><br />
+      <code>git branch newBranchName</code><br />
+      <code>git checkout newBranchName</code><br /><br />
+      <span>OR</span><br /><br />
+      <code>git checkout -b newBranchName</code><br />
+    </div>
+    <p>Once you branch out add, commit and push at regular interivals</p>
+    <h2>What if I mess up?</h2>
+    <p>Oops, I broke it, what do I do?</p>
+    <div class="commands">
+      <span>We need to go back, whatever I changed broke everything.</span><br />
+      <code>git reflog</code><br /><br />
+      <span>Cool, this is like a list of EVERY COMMIT EVER?! rollback to a previous commit.</span><br />
+      <code>git reset ######</code>
+    </div>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://www.atlassian.com/git/tutorials">Become a git guru</a></li>
+      <li><a href="http://ohshitgit.com/">Oh Shit, git!</a></li>
+    </ul>
   </body>
 </html>
